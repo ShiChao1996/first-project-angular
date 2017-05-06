@@ -1,0 +1,25 @@
+<div [@fadeIn]="active">
+  <div class="list-group">
+    <a href="javaScript:;" class="list-group-item active">
+      文档下载
+    </a>
+    <a href="javaScript:;" class="list-group-item">
+      <div class="row">
+        <div class="col-xs-7">
+          标题
+        </div>
+        <div class="col-xs-5">最后修改时间</div>
+      </div>
+    </a>
+    <div *ngFor="let file of files">
+      <a href={{file.url}} class="list-group-item">
+        <div class="row">
+          <div class="col-xs-7">
+            {{file.name}}
+          </div>
+          <div class="col-xs-5">{{file.expire | date:'yyyy-MM-dd'}}</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

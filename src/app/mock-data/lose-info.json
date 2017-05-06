@@ -1,0 +1,9 @@
+{
+  "data":[
+    {"name":"张三","loseTime":"2017.02.20","where":"ground"},
+    {"name":"李四","loseTime":"2017.02.20","where":"ground"},
+    {"name":"王五","loseTime":"2017.02.20","where":"ground"},
+    {"name":"赵二麻子","loseTime":"2017.02.20","where":"ground"},
+    {"name":"石大帅","loseTime":"2017.02.20","where":"ground"}
+  ]
+}

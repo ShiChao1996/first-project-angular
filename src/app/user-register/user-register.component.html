@@ -1,0 +1,52 @@
+<div [@fadeIn]="active">
+  <div class="container" [hidden]="submitted">
+    <h2>用户注册</h2>
+    <form  (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="name">学号</label>
+        <input type="text" class="form-control" id="name" maxlength="4" minlength="4"
+               required placeholder="您的学号"
+               (focus)="nameFocus()" (blur)="nameBlur()"
+               [(ngModel)]="model.name" name="name"
+               #name="ngModel" >
+        <div [hidden]="(name.valid || name.pristine||NameFocus)"
+             class="alert alert-danger">
+          {{name.value==''?"Name is required":"you may input a wrong stuID"}}
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="psw">密码</label>
+        <input type="password"  class="form-control" id="psw"
+               (focus)="pswFocus()" (blur)="pswBlur()"
+               required minlength="4" placeholder="密码长度不小于4位"
+               [(ngModel)]="model.psw" name="psw" #psw="ngModel">
+        <div [hidden]="(psw.valid || psw.pristine)||PswFocus"
+             class="alert alert-danger">
+          密码长度不小于4位
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPsw">确认密码</label>
+        <input type="password"  class="form-control" id="confirmPsw"
+               (focus)="confirmFocus()" (blur)="confirmBlur()"
+               required
+               [(ngModel)]="model.confirmPsw" name="confirmPsw"
+               #confirmPsw="ngModel" placeholder="请确认密码">
+        <div [hidden]="confirmPsw.pristine||psw.value==confirmPsw.value||ConfirmFocus"
+             class="alert alert-danger">
+          两次密码不一致
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success"
+              [disabled]="!loginForm.form.valid||psw.value!=confirmPsw.value">Submit</button>
+      <button type="button" class="btn btn-default" (click)="loginForm.reset()">reset</button>
+
+    </form>
+  </div>
+
+
+</div>

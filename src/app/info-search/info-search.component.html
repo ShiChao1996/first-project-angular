@@ -1,0 +1,20 @@
+<div [@fadeIn]="active">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">信息查找</h2>
+    </div>
+    <div class=" panel-body head">
+      <div class="col-xs-7">标题</div>
+      <div class="col-xs-5">最后修改时间</div>
+    </div>
+
+    <div class="panel-body single" *ngFor="let msg of message">
+      <div class="row">
+        <div class="col-xs-7">
+          <demo-accordion title={{msg.title}} content={{msg.content}}></demo-accordion>
+        </div>
+        <div class="col-xs-5">{{msg.time  | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+      </div>
+    </div>
+  </div>
+</div>

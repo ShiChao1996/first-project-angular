@@ -1,0 +1,21 @@
+line-chart-demo {
+  z-index: 1;
+}
+
+.head {
+  border: none !important;
+  background-color: #039be5;
+  height: 30px;
+  color: white;
+}
+
+.col-xs-4 {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.panel-body {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed #5ce7b0;
+}

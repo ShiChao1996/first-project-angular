@@ -1,0 +1,29 @@
+<div [@fadeIn]="active">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">新闻早知道</h2>
+    </div>
+    <div class="panel-body double" *ngIf="this.currentNews[0]" (click)="gotoDetail(this.currentNews[0].id)">
+      <span>{{this.currentNews[0].title}}</span>
+      <p>{{this.currentNews[0].content}}</p>
+    </div>
+    <div class="panel-body single" *ngIf="this.currentNews[1]" (click)="gotoDetail(this.currentNews[1].id)">
+        <span>{{this.currentNews[1].title}}</span>
+        <p>{{this.currentNews[1].content}}</p>
+    </div>
+    <div class="panel-body double" *ngIf="this.currentNews[2]" (click)="gotoDetail(this.currentNews[2].id)">
+      <span>{{this.currentNews[2].title}}</span>
+      <p>{{this.currentNews[2].content}}</p>
+    </div>
+    <div class="panel-body single" *ngIf="this.currentNews[3]" (click)="gotoDetail(this.currentNews[3].id)">
+      <span>{{this.currentNews[3].title}}</span>
+      <p>{{this.currentNews[3].content}}</p>
+    </div>
+  </div>
+  <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+
+
+
+  <router-outlet></router-outlet>
+</div>

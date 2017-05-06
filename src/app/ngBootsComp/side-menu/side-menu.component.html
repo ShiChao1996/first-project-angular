@@ -1,0 +1,39 @@
+
+<div class="menu" [hidden]="loginService.adminLoggedIn||!(loginService.userLoggedIn||loginService.adminLoggedIn)">
+  <div class="title" [class.active]="state1==='active'" (click)="changeState1()">
+    <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+    卡务公告
+    <span>+</span>
+  </div>
+  <div class="link" [@height1]="state1">
+    <a routerLink="card-info"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>卡务信息</a>
+    <a routerLink="news" (click)="closeSideBar()"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>新闻早知道</a>
+    <a routerLink="lose-info"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>遗失公示</a>
+    <a routerLink="info-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>信息查询</a>
+    <a routerLink="file-download"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>文档下载</a>
+  </div>
+</div>
+<div class="menu" [hidden]="loginService.adminLoggedIn||!(loginService.userLoggedIn||loginService.adminLoggedIn)">
+  <div class="title" (click)="changeState2()" [class.active]="state2==='active'">
+    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+    个人资料
+    <span>+</span>
+  </div>
+  <div class="link" [@height2]="state2" >
+    <a routerLink="user-info"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>个人信息</a>
+    <a routerLink="about-card"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>一卡通信息</a>
+    <a routerLink="report-lose"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>一卡通挂失</a>
+    <a routerLink="data-analyse"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>数据分析</a>
+  </div>
+</div>
+<div class="menu" [hidden]="loginService.userLoggedIn||!(loginService.userLoggedIn||loginService.adminLoggedIn)">
+  <div class="link">
+    <a routerLink="admin-office"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>办公地址管理</a>
+    <a routerLink="admin-log"><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>日志管理</a>
+    <a routerLink="admin-news"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>新闻管理</a>
+    <a routerLink="admin-losing"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>遗失管理</a>
+    <a routerLink="admin-file"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>文件管理</a>
+    <a routerLink="admin-info"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>信息管理</a>
+  </div>
+</div>
+

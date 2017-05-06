@@ -1,0 +1,75 @@
+<div [@fadeIn]="active">
+  <div class="modal fade myModal" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+       tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">编辑</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--  <div class="modal-body modal-content">
+            <label for="title">标题</label>
+            <input type="text" id="title">
+            <br/>
+
+            <button type="button" class="btn btn-default" (click)="staticModal.hide()">取消</button>
+            <button type="button" class="btn btn-primary">确认</button>
+          </div>-->
+      </div>
+    </div>
+  </div>
+
+  <!--Small modal-->
+  <div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">确认删除？</h4>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="smModal.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body modal-content">
+          <button type="button" class="btn btn-default" (click)="staticModal.hide()">取消</button>
+          <button type="button" class="btn btn-primary">确认</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="list-group">
+    <a href="javaScript:;" class="list-group-item active">
+      新闻管理
+    </a>
+    <a href="javaScript:;" class="list-group-item">
+      <div class="row">
+        <div class="col-xs-2">编辑</div>
+        <div class="col-xs-2">标题</div>
+        <div class="col-xs-4">内容</div>
+        <div class="col-xs-2">修改时间</div>
+        <div class="col-xs-2">删除</div>
+      </div>
+    </a>
+    <div *ngFor="let file of files">
+      <a class="list-group-item">
+        <div class="row">
+          <div class="col-xs-2">
+            <a routerLink="admin-new-edit" type="button" class="btn btn-primary">编辑</a>
+          </div>
+          <div class="col-xs-2">标题</div>
+          <div class="col-xs-4 summary">{{content}}</div>
+          <div class="col-xs-2">{{time | date:'yyyy-MM-dd'}}</div>
+          <div class="col-xs-2">
+            <button type="button" class="btn btn-danger" (click)="smModal.show()">删除</button>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

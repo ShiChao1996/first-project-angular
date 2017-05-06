@@ -1,0 +1,16 @@
+<table class="table table-striped table-hover ">
+  <thead class="orange">
+  <tr>
+    <th *ngFor="let column of columns" >
+      {{ column.title }}
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of rows;let i=index" >
+    <td *ngFor="let column of columns " >
+      {{ row[column.field] }}
+    </td>
+  </tr>
+  </tbody>
+</table>

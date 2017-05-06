@@ -1,0 +1,24 @@
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+.container{
+  width:100% !important;
+}
+.alert{
+  font-size: 12px !important;
+}
+button{
+  margin:5px !important;
+}
+
+
+
+@media (min-width: 350px){
+  .admin{
+    float: right;
+  }
+}

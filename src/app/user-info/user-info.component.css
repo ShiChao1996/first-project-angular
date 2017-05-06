@@ -1,0 +1,28 @@
+.panel-body{
+  border-bottom: 1px solid #eeeeee !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.panel-title{
+  text-align: center;
+}
+
+.col-xs-4,.col-xs-8{
+  font-size: 14px;
+  padding: 5px;
+  text-align: center;
+}
+
+.change:hover{
+  color: #ffe08d;
+  margin-left: 15px;
+}
+
+.change{
+  margin-left: 15px;
+}
+
+.item{
+  border-bottom:1px solid #efefef;
+}

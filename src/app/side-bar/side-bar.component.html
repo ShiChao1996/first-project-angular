@@ -1,0 +1,76 @@
+<div class="side-bar" [@left]="appService.sideBarState">
+  <div class="side-bar-left">
+    <div class="title">
+      <h2>校园一卡通</h2>
+      <h4>信息管理系统</h4>
+    </div>
+    <div class="choose">
+      <app-side-menu></app-side-menu>
+    </div>
+  </div>
+
+  <div class="side-bar-right">
+    <div style="background-color: #282c35;color: whitesmoke" (click)="changeState()">
+      <span class="glyphicon glyphicon-th-list" style="font-size: 28px;position: relative;top:8px;" aria-hidden="true"></span>
+    </div>
+
+    <!--用户登录显示-->
+    <div class="small-bar hidden-xs" *ngIf="appService.sideBarShow&&loginService.userLoggedIn">
+      <div class="small-icon" (mouseenter)="mouseoverIcon1()" (mouseleave)="mouseoutIcon1()" [class.active]="smallBarShow1">
+        <span class="glyphicon glyphicon-briefcase" style="font-size: 20px" aria-hidden="true"></span>
+      </div>
+      <!--hover show-->
+      <div class="small-menu small-menu-1" *ngIf="smallBarShow1" (click)="smallBarShow1=false" (mouseenter)="mouseenterMenu1()" (mouseleave)="smallBarShow1=false">
+        <div class="my-title">
+          卡务公告
+        </div>
+        <div class="link">
+          <a routerLink="card-info"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>卡务信息</a>
+          <a routerLink="news"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>新闻早知道</a>
+          <a routerLink="lose-info"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>遗失公示</a>
+          <a routerLink="info-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>信息查询</a>
+          <a routerLink="file-download"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>文档下载</a>
+        </div>
+
+      </div>
+      <!---->
+      <div class="small-icon" (mouseenter)="mouseoverIcon2()" (mouseleave)="mouseoutIcon2()" [class.active]="smallBarShow2">
+        <span class="glyphicon glyphicon-user" style="font-size: 20px" aria-hidden="true"></span>
+      </div>
+      <div class="small-menu small-menu-2" *ngIf="smallBarShow2" (click)="smallBarShow2=false" (mouseenter)="mouseenterMenu2()" (mouseleave)="smallBarShow2=false">
+        <div class="my-title">
+          个人资料
+        </div>
+        <div class="link">
+          <a routerLink="user-info"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>个人信息</a>
+          <a routerLink="about-card"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>一卡通信息</a>
+          <a routerLink="report-lose"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>一卡通挂失</a>
+          <a routerLink="data-analyse"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>数据分析</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!--管理员登录显示-->
+    <div class="small-bar hidden-xs" *ngIf="appService.sideBarShow&&loginService.adminLoggedIn">
+      <div class="small-icon" (mouseenter)="mouseoverIcon1()" (mouseleave)="mouseoutIcon1()" [class.active]="smallBarShow1">
+        <span class="glyphicon glyphicon-globe" style="font-size: 20px" aria-hidden="true"></span>
+      </div>
+      <!--hover show-->
+      <div class="small-menu small-menu-1" *ngIf="smallBarShow1" (click)="smallBarShow1=false" (mouseenter)="mouseenterMenu1()" (mouseleave)="smallBarShow1=false">
+        <div class="my-title">
+          管理设置
+        </div>
+        <div class="link">
+          <a routerLink="admin-office"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>办公地址管理</a>
+          <a routerLink="admin-log"><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>日志管理</a>
+          <a routerLink="admin-news"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>新闻管理</a>
+          <a routerLink="admin-losing"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>遗失管理</a>
+          <a routerLink="admin-file"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>文件管理</a>
+          <a routerLink="admin-info"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>信息管理</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

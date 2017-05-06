@@ -1,0 +1,15 @@
+.panel-body{
+  max-height: 70px !important;
+  border-bottom: 1px dashed #5ce7b0;
+}
+span{
+  font-size: 18px;
+}
+.panel{
+  margin-bottom: 0 !important;
+}
+p{
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

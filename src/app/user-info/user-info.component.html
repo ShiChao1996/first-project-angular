@@ -1,0 +1,55 @@
+
+<div [@fadeIn]="active">
+  <div class="panel panel-default">
+
+    <a class="list-group-item active">
+      <h2 class="panel-title">我的信息
+        <span (click)="changeInfo()" class="change">
+          <span class="glyphicon glyphicon-edit " aria-hidden="true"></span>编辑
+        </span>
+      </h2>
+    </a>
+    <a class="list-group-item item">
+      <div class="row">
+        <div class="col-xs-4">姓名</div>
+        <div class="col-xs-8">{{this.currentUser.name}}</div>
+      </div>
+    </a>
+    <a class="list-group-item item">
+      <div class="row">
+        <div class="col-xs-4">性别</div>
+        <div class="col-xs-8">{{this.currentUser.sex}}</div>
+      </div>
+    </a>
+    <a class="list-group-item item">
+      <div class="row">
+        <div class="col-xs-4">民族</div>
+        <div class="col-xs-8">{{this.currentUser.race}}</div>
+      </div>
+    </a>
+    <a class="list-group-item item">
+      <div class="row">
+        <div class="col-xs-4">学历</div>
+        <div class="col-xs-8">{{this.currentUser.degree}}</div>
+      </div>
+    </a>
+    <a class="list-group-item item">
+      <div class="row">
+        <div class="col-xs-4">学号</div>
+        <div class="col-xs-8">{{this.currentUser.stuId}}</div>
+      </div>
+    </a>
+    <a class="list-group-item item">
+      <div class="row">
+        <div class="col-xs-4">院系</div>
+        <div class="col-xs-8">{{this.currentUser.department}}</div>
+      </div>
+    </a>
+    <a class="list-group-item item">
+      <div class="row">
+        <div class="col-xs-4">电话</div>
+        <div class="col-xs-8">{{this.currentUser.phone}}</div>
+      </div>
+    </a>
+  </div>
+</div>

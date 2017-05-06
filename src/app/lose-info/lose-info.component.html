@@ -1,0 +1,22 @@
+
+<div [@fadeIn]="active">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">遗失公示</h2>
+    </div>
+    <div class=" panel-body head">
+        <div class="col-xs-4">姓名</div>
+        <div class="col-xs-4">遗失时间</div>
+        <div class="col-xs-4">遗失地点</div>
+    </div>
+
+    <div class="panel-body single" *ngFor="let msg of messages">
+      <div class="row">
+        <div class="col-xs-4">{{msg.name}}</div>
+        <div class="col-xs-4">{{msg.loseTime}}</div>
+        <div class="col-xs-4">{{msg.where}}</div>
+      </div>
+    </div>
+  </div>
+
+</div>

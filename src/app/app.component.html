@@ -1,0 +1,19 @@
+<body>
+<div class="main">
+  <app-side-bar ></app-side-bar>
+  <div class="my-nav">
+    <span class="hidden-xs">{{currentTime | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+    <div class="right" *ngIf="loginService.userLoggedIn||loginService.adminLoggedIn">
+      <img src="../app/image/head.jpg" width="40" height="40" class="img-circle">
+      <demo-dropdown></demo-dropdown>
+    </div>
+  </div>
+</div>
+<div class="main-content">
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+</body>
