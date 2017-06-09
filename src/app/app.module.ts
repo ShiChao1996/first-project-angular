@@ -54,6 +54,7 @@ import { ModalModule } from 'ng2-bootstrap/modal';
 import { AdminNewEditComponent } from './admin-news/admin-new-edit/admin-new-edit.component';
 import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
 import { CKEditorModule } from 'ng2-ckeditor';
+import { FancyImageUploaderModule } from 'ng2-fancy-image-uploader';
 
 @NgModule({
   declarations: [
@@ -105,7 +106,7 @@ import { CKEditorModule } from 'ng2-ckeditor';
     ChartsModule,
     ModalModule.forRoot(),
     CKEditorModule,
-
+    FancyImageUploaderModule
   ],
   providers: [
     AnimationService,

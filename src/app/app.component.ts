@@ -7,12 +7,14 @@ import { LoginService } from './login.service';
 import './rxjs-oprators';
 import { AppService } from './app.service';
 import { flyIn } from './animate/fly-in';
+import { width } from './animate/width';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations:[
-    flyIn
+    flyIn,
+    width
   ]
 })
 export class AppComponent {

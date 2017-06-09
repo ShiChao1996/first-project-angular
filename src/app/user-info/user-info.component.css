@@ -26,3 +26,8 @@
 .item{
   border-bottom:1px solid #efefef;
 }
+
+.route-content{
+  overflow: auto !important;
+  height: 500px;
+}

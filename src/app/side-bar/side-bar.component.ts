@@ -3,12 +3,14 @@ import { LoginService } from '../login.service';
 import { AnimationService } from '../animate/animation';
 import { AppService } from '../app.service';
 import { left } from '../animate/left';
+import { height4 } from "../animate/height";
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.css'],
   animations:[
-    left
+    left,
+    height4
   ]
 })
 export class SideBarComponent implements OnInit {

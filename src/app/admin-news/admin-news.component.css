@@ -1,5 +1,7 @@
 .myModal {
   margin-top: 120px !important;
+  position: absolute;
+  z-index: 10 !important;
 }
 
 .summary {

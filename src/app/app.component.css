@@ -5,13 +5,23 @@ body{
 }
 .main{
   width:100%;
+  height:100%;
   position: fixed;
   top:0;
-  z-index: 4;
+  z-index: 2;
+}
+.mask{
+  width:100%;
+  height:100%;
+  background-color: black !important;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 3;
 }
 app-side-bar{
   position: absolute;
-  z-index: 3;
+  height:100%;
+  z-index: 10;
   left:0;
 }
 .my-nav{
@@ -32,29 +42,36 @@ app-side-bar{
   background-color: #eeeeee;
 }
 .main-content{
-  background-color: rgba(239, 239, 239, 0.49);
-  min-height: 440px;
+  height:100%;
 }
 .content{
   width:100%;
   padding: 15px;
   margin:0 auto;
-  margin-top: 60px;
   border-radius: 5px;
   height:100%;
+  overflow: auto;
 }
 
 
-@media (min-width: 350px) {
+@media (min-width: 400px) {
+  body{
+    height:100%
+  }
   .main{
     width:100%;
+    height:100%;
     position: fixed;
     top:0;
-    z-index:4;
+    z-index:2;
+  }
+  .mask{
+    display: none;
+    z-index: 3;
   }
   app-side-bar{
     position: absolute;
-    z-index: 3;
+    z-index: 10;
   }
   .my-nav{
     height:60px;
@@ -74,21 +91,20 @@ app-side-bar{
     background-color: rgba(239, 239, 239, 0.49);
   }
   .main-content{
-    background-color: rgba(239, 239, 239, 0.49);
     width:100%;
-    height:750px;
+    height:100%;
   }
   .content{
     width:70%;
     padding: 15px;
     margin:0 auto;
-    margin-top:60px;
     border-radius: 10px;
-
+    height:100%;
+    overflow: auto;
   }
   .mask{
     width:100%;
-    height:800px;
+    height:100%;
     background-color: #2a852d;
   }
 }

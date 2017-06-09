@@ -1,148 +1,58 @@
-.side-bar-right:hover,.right:hover{
-  background-color: #eeeeee;
-}
-.side-bar-right{
-  height:60px;
-  width:60px;
-  line-height: 60px;
-  text-align: center;
-  border-right: 1px solid #eeeeee;
-  border-bottom:1px solid #eeeeee;
-  float: right;
-  transition: background-color 1s;
-  position: absolute;
-  right: -60px;
-  background-color: #282c35 !important;
-}
+@media (max-width: 400px) {
+  .side-bar-right{
+    width:60px;
+    height:60px !important;
+    background-color:  rgb(29,41,57);
+    position: absolute;
+    right:-60px;
+    overflow: hidden;
+  }
 
-.side-bar{
-  position: absolute;
-  width:200px;
-  float: left;
-  background-color: white;
-}
-.side-bar-left{
-  width:200px;
-  height:750px;
-  float: left;
-  background-color: rgb(29,41,57);
-}
-.title{
-  text-align: center;
-  color:white;
-}
-.small-bar{
-  width:60px;
-  height:690px;
-  border-right: 1px solid #eeeeee;
-  background-color: black;
-}
-.small-icon{
-  transition: background-color 0.5s;
-  position: relative;
-  color:whitesmoke;
-}
-.active ,.small-icon:hover{
-  background-color: #005359;
-}
-.small-menu{
-  width:150px;
-  position: absolute;
-  left:60px;
-  background-color: rgba(208, 212, 192, 0.68);
-  transition: opacity 1s;
-  border-radius:10px;
-}
-.small-menu-1{
-  top:60px;
-}
-.small-menu-2{
-  top:120px;
-}
-.small-menu a{
-  display: block;
-  width:100%;
-  height:40px;
-  color: #ecf0ff;
-  line-height: 40px;
-  text-decoration: none;
-  transition: background-color 0.7s;
-  background-color: #008891;
-}
-.small-menu a:hover{
-  color: #ffe08d;
-  background-color: #009fab;
-}
-.link{
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: #008891;
-  text-align: center;
-}
-.my-title{
-  font-size: 20px;
-  padding: 1px;
-  color: #e0f1d0;
-  text-align: center;
-  background-color:#005359;
-  border-radius: 5px;
-  transition: background-color 0.7s;
-}
-.my-title:hover{
-  background-color: #008891;
-}
-.choose{
-  background-color: rgb(29,41,57);
-}
-
-
-@media (max-width: 350px) {
-  .side-bar-right:hover,.right:hover{
+  .side-bar-right-btn:hover,.right:hover{
     background-color: #eeeeee;
   }
-  .side-bar-right{
+  .side-bar-right-btn{
     height:60px;
     width:60px;
     line-height: 60px;
     text-align: center;
-    border-right: 1px solid #eeeeee;
-    border-bottom:1px solid #eeeeee;
     float: right;
     transition: background-color 1s;
     position: absolute;
-    right: -60px;
-    background-color: white;
+    background-color: #282c35 !important;
+    color:white;
   }
 
   .side-bar{
     position: absolute;
     width:200px;
+    height:100%;
     float: left;
-    background-color: white;
   }
   .side-bar-left{
     width:200px;
-    height:500px;
+    height:100%;
     float: left;
     background-color: rgb(29,41,57);
   }
   .title{
     text-align: center;
     color:white;
+    background-color: rgb(29,41,57);
   }
   .small-bar{
     width:60px;
-    height:500px;
     border-right: 1px solid #eeeeee;
-    background-color: rgb(55,62,64);
   }
   .small-icon{
+    height:60px;
     transition: background-color 0.5s;
-    position: relative;
+    position: absolute;
+    top:60px;
     color:whitesmoke;
   }
   .active ,.small-icon:hover{
-    background-color: #eeeeee;
+    background-color: #005359;
   }
   .small-menu{
     width:150px;
@@ -151,7 +61,6 @@
     background-color: rgba(208, 212, 192, 0.68);
     transition: opacity 1s;
     border-radius:10px;
-    padding-bottom: 10px;
   }
   .small-menu-1{
     top:60px;
@@ -162,22 +71,153 @@
   .small-menu a{
     display: block;
     width:100%;
-    height:30px;
-    padding-left: 30px;
-    text-align: left;
-    line-height: 30px;
+    height:40px;
+    color: #ecf0ff;
+    line-height: 40px;
     text-decoration: none;
-    transition: background-color 0.5s;
+    transition: background-color 0.7s;
+    background-color: #008891;
   }
   .small-menu a:hover{
-    background-color: #1b6d85;
-    color: whitesmoke;
+    color: #ffe08d;
+    background-color: #009fab;
   }
   .link{
     overflow: hidden;
     border-radius: 5px;
     background-color: #008891;
     text-align: center;
+  }
+  .my-title{
+    font-size: 20px;
+    padding: 1px;
+    color: #e0f1d0;
+    text-align: center;
+    background-color:#005359;
+    border-radius: 5px;
+    transition: background-color 0.7s;
+  }
+  .my-title:hover{
+    background-color: #008891;
+  }
+  .choose{
+    background-color: rgb(29,41,57);
+  }
+
+}
+
+
+
+
+/*大屏幕*/
+@media (min-width: 400px) {
+
+  .side-bar-right{
+    width:60px;
+    height:100%;
+    background-color:  rgb(29,41,57);
+    position: absolute;
+    right:-60px;
+  }
+
+  .side-bar-right-btn:hover,.right:hover{
+    background-color: #eeeeee;
+  }
+  .side-bar-right-btn{
+    height:60px;
+    width:60px;
+    line-height: 60px;
+    text-align: center;
+    float: right;
+    transition: background-color 1s;
+    position: absolute;
+    background-color: #282c35 !important;
+    color:white;
+  }
+
+  .side-bar{
+    position: absolute;
+    width:200px;
+    height:100%;
+    float: left;
+  }
+  .side-bar-left{
+    width:200px;
+    height:100%;
+    float: left;
+    background-color: rgb(29,41,57);
+  }
+  .title{
+    text-align: center;
+    color:white;
+    background-color: rgb(29,41,57);
+  }
+  .small-bar{
+    width:60px;
+    border-right: 1px solid #eeeeee;
+  }
+  .small-icon{
+    height:60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    transition: background-color 0.5s;
+    position: absolute;
+    top:60px;
+    color:whitesmoke;
+  }
+  .active ,.small-icon:hover{
+    background-color: #005359;
+  }
+  .small-menu{
+    width:150px;
+    position: absolute;
+    left:60px;
+    background-color: rgba(208, 212, 192, 0.68);
+    transition: opacity 1s;
+    border-radius:10px;
+  }
+  .small-menu-1{
+    top:120px;
+  }
+  .small-menu-2{
+    top:60px;
+  }
+  .small-menu a{
+    display: block;
+    width:100%;
+    height:40px;
+    color: #ecf0ff;
+    line-height: 40px;
+    text-decoration: none;
+    transition: background-color 0.7s;
+    background-color: #008891;
+  }
+  .small-menu a:hover{
+    color: #ffe08d;
+    background-color: #009fab;
+  }
+  .link{
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #008891;
+    text-align: center;
+  }
+  .my-title{
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    color: #e0f1d0;
+    text-align: center;
+    background-color:#005359;
+    border-radius: 5px;
+    transition: background-color 0.7s;
+  }
+  .my-title:hover{
+    background-color: #008891;
+  }
+  .choose{
+    background-color: rgb(29,41,57);
   }
 
 }

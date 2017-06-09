@@ -6,8 +6,8 @@ import 'rxjs/add/operator/delay';
 
 @Injectable()
 export class LoginService{
-    userLoggedIn:boolean = false;
-    adminLoggedIn:boolean = true;
+    userLoggedIn:boolean = true;
+    adminLoggedIn:boolean = false;
     redirectUrl:string;
 
     userLogin():Observable<boolean>{

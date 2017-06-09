@@ -9,14 +9,14 @@
     </div>
   </div>
 
-  <div class="side-bar-right">
-    <div style="background-color: #282c35;color: whitesmoke" (click)="changeState()">
+  <div class="side-bar-right" [@height4]="appService.sideBarState">
+    <div class="side-bar-right-btn" (click)="changeState()">
       <span class="glyphicon glyphicon-th-list" style="font-size: 28px;position: relative;top:8px;" aria-hidden="true"></span>
     </div>
 
     <!--用户登录显示-->
-    <div class="small-bar hidden-xs" *ngIf="appService.sideBarShow&&loginService.userLoggedIn">
-      <div class="small-icon" (mouseenter)="mouseoverIcon1()" (mouseleave)="mouseoutIcon1()" [class.active]="smallBarShow1">
+    <div class="small-bar" *ngIf="!appService.sideBarShow&&loginService.userLoggedIn">
+      <div class="small-icon" style="margin-top: 60px" (mouseenter)="mouseoverIcon1()" (mouseleave)="mouseoutIcon1()" [class.active]="smallBarShow1">
         <span class="glyphicon glyphicon-briefcase" style="font-size: 20px" aria-hidden="true"></span>
       </div>
       <!--hover show-->
@@ -52,7 +52,7 @@
     </div>
 
     <!--管理员登录显示-->
-    <div class="small-bar hidden-xs" *ngIf="appService.sideBarShow&&loginService.adminLoggedIn">
+    <div class="small-bar hidden-xs" *ngIf="!appService.sideBarShow&&loginService.adminLoggedIn">
       <div class="small-icon" (mouseenter)="mouseoverIcon1()" (mouseleave)="mouseoutIcon1()" [class.active]="smallBarShow1">
         <span class="glyphicon glyphicon-globe" style="font-size: 20px" aria-hidden="true"></span>
       </div>
